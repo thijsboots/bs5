@@ -1,0 +1,53 @@
+bs5.xs-max:
+  label: xs-max
+  mediaQuery: '(max-width: 575.98px)'
+  weight: 1
+  group: Bootstrap
+  multipliers:
+    - 1x
+    - 2x
+
+bs5.sm-min:
+  label: sm
+  mediaQuery: '(min-width: 576px)'
+  weight: 2
+  group: Bootstrap
+  multipliers:
+    - 1x
+    - 2x
+
+bs5.md:
+  label: md
+  mediaQuery: '(min-width: 768px)'
+  weight: 3
+  group: Bootstrap
+  multipliers:
+    - 1x
+    - 2x
+
+bs5.lg:
+  label: lg
+  mediaQuery: '(min-width: 992px)'
+  weight: 4
+  group: Bootstrap
+  multipliers:
+    - 1x
+    - 2x
+
+bs5.xl:
+  label: xl
+  mediaQuery: '(min-width: 1200px)'
+  weight: 5
+  group: Bootstrap
+  multipliers:
+    - 1x
+    - 2x
+
+bs5.xxl:
+  label: xxl
+  mediaQuery: '(min-width: 1470px)'
+  weight: 6
+  group: Bootstrap
+  multipliers:
+    - 1x
+    - 2x

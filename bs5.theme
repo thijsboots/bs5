@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK() for menu-local-task templates.
+ */
+function bs5_preprocess_menu_local_task(&$variables) {
+  // Ensure appropriate classes are set on primary tasks (nav tabs)
+  if (isset($variables['is_active']) && $variables['is_active'] === TRUE) {
+    $variables['link']['#options']['attributes']['class'][] = 'active is-active';
+  }
+  else {
+    $variables['link']['#options']['attributes']['class'][] = 'nav-link';
+  }
+  // Add the level attribute
+  if (isset($variables['element']['#level'])) {
+    $variables['level'] = $variables['element']['#level'];
+  }
+}
+
+/**
+ * Implements theme_preprocess_textarea().
+ */
+function bs5_preprocess_textarea(&$variables) {
+  $variables['attributes']['class'][] = 'form-control';
+}
+
+/**
+ * Implements template_preprocess_HOOK() for input.
+ */
+function bs5_preprocess_input(&$variables) {
+  $type_html = $variables['attributes']['type'];
+  $text_types_html = [
+    'text',
+    'email',
+    'tel',
+    'number',
+    'search',
+    'password',
+    'url',
+    'month',
+    'week',
+  ];
+  if (in_array($type_html, $text_types_html)) {
+    $variables['attributes']['class'][] = 'form-control';
+  }
+  if (in_array($type_html, ['checkbox'])) {
+    $variables['attributes']['class'][] = 'form-check-input';
+  }
+}
+
+/**
+ * Implements theme_preprocess_datetime_form().
+ */
+function bs5_preprocess_datetime_form(&$variables) {
+  $variables['attributes']['class'][] = 'form-inline';
+}

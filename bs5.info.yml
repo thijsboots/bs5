@@ -1,0 +1,27 @@
+name: BS5
+type: theme
+description: 'Bootstrap 5 based Drupal theme'
+core_version_requirement: ^8.9 || ^9
+base theme: classy
+
+ckeditor_stylesheets:
+  - css/style.css
+
+libraries:
+  - bs5/bootstrap
+  - bs5/global-styling
+  - bs5/global-scripts
+
+stylesheets-remove:
+  - '@classy/css/components/tabs.css'
+
+regions:
+  header: Header
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: Breadcrumbs
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer
